@@ -8,13 +8,13 @@ Pythonic CFFI wrapper for [CANape](https://vector.com/vi_canape_en.html). This i
 
 Examples are located in the [`Examples`](Examples) directory. These codes do work but are not fully featured.
 
-- [00_Asap3GetVersion.ipynb](Examples/00_Asap3GetVersion.ipynb) Read DLL API version, example Python Syntatic Sugar.
-- [01_CANape_Launch_Asap3Init.ipynb](Examples/01_CANape_Launch_Asap3Init.ipynb) - Open CANape with Asap3init & Exit
-- [`asap3init.py`](Examples/asap3init.py) - Open CANape with Asap3init, pause 10 seconds, Exit
+- [00_Asap3GetVersion.ipynb](Examples/00_Asap3GetVersion.ipynb) Read DLL API version with and without a Pythonized `version_t` class.
+- [01_CANape_Launch_Asap3Init.ipynb](Examples/01_CANape_Launch_Asap3Init.ipynb) - Open CANape with Asap3init & Exit.
+- [`asap3init.py`](Examples/asap3init.py) - Open CANape with Asap3init, pause 10 seconds, Exit.
 
 # Proof of Concept Pesudo-Code:
 
-**These examples do not work. These are examples of what could be possible if a proper development effort was made.** 
+**These examples do not work. These are examples of what could be possible if a proper open-sourced development effort was made.** 
 
 Create CANape object.
 
@@ -35,7 +35,7 @@ After initializing the ASAP3 connection, a new module/device has to be created a
     canape.attach_asap(a2l=r"C:\Vector\Data\Experiment1\TopSecret.a2l",
                         channel = 2);
 
-To create a connection to a CAN device, the module can to be created like this:
+To create a connection to a CAN device, the module can be created like this:
 
     canape.create_module (name = "CAN",
                           database= r"C:\Vector\Data\Experiment1\TopSecret.dbc",,
